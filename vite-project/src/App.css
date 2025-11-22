@@ -1,0 +1,86 @@
+ :root {
+                --bg: #fffefc;
+                --card: #ffffff;
+                --muted: #6b7280;
+                --accent: #fbbc04;
+                --radius: 12px;
+                --shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+                font-family: Inter, system-ui, sans-serif;
+            }
+            body {
+                margin: 0;
+                background: var(--bg);
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #1f2937;
+            }
+            h1 {
+                margin: 0 0 20px 0;
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            /* input bar like Google Keep */
+            .new-note {
+                width: 100%;
+                max-width: 700px;
+                background: var(--card);
+                box-shadow: var(--shadow);
+                border-radius: var(--radius);
+                padding: 14px 18px;
+                margin-bottom: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .new-note input,
+            .new-note textarea {
+                width: 100%;
+                border: 0;
+                outline: none;
+                resize: none;
+                font-size: 15px;
+                background: transparent;
+            }
+            .new-note textarea {
+                min-height: 40px;
+            }
+
+            /* notes grid */
+            .grid {
+                width: 100%;
+                max-width: 1100px;
+                display: grid;
+                gap: 16px;
+                grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            }
+            .note {
+                background: var(--card);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                padding: 14px 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                min-height: 120px;
+            }
+            .note h3 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .note p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.45;
+                color: #374151;
+            }
+
+            /* footer */
+            footer {
+                margin-top: 40px;
+                color: var(--muted);
+                font-size: 13px;
+            }
